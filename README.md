@@ -21,11 +21,11 @@ Doc creation is using _@openzeppelin/solidity-docgen_ and a personal 'turbo' ver
 
 ### StockFactory
 
-[StockFactory docs](../project/docgen/docs/StockFactory.md)
+[StockFactory docs](./project/docgen/docs/StockFactory.md)
 
 or
 
-[Summary](../project/docgen/docs/SUMMARY.md)
+[Summary](./project/docgen/docs/SUMMARY.md)
 
 in case the link is broken.
 
