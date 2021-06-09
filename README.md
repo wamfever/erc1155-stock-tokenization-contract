@@ -25,7 +25,7 @@ Doc creation is using _@openzeppelin/solidity-docgen_ and a personal 'turbo' ver
 
 or
 
-[Summary](./project/docgen/docs/SUMMARY.md)
+[Summary](./project/docgen/SUMMARY.md)
 
 in case the link is broken.
 
