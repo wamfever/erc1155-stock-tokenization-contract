@@ -1,0 +1,30 @@
+{
+  "name": "erc1155-stock-tokenization-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test",
+    "docify": "node docify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wamfever/erc1155-stock-tokenization-contract.git"
+  },
+  "author": "Elod Varga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wamfever/erc1155-stock-tokenization-contract/issues"
+  },
+  "homepage": "https://github.com/wamfever/erc1155-stock-tokenization-contract#readme",
+  "devDependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.1.0",
+    "@openzeppelin/truffle-upgrades": "^1.7.0",
+    "solidity-docgen": "^0.5.13",
+    "truffle": "^5.3.3",
+    "truffle-assertions": "^0.9.2"
+  },
+  "dependencies": {
+    "solc": "^0.8.4"
+  }
+}
