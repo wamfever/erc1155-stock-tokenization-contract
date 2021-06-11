@@ -23,6 +23,10 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+const fs = require('fs');
+const secrets = JSON.parse(fs.readFileSync('.secrets.json').toString().trim());
+
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
   /**
@@ -80,6 +84,16 @@ module.exports = {
           'hundred minor risk diamond dance guess lobster eye inch valve debris mesh',
       },
     },
+    ropsten: {
+      networkCheckTimeout: 10000,
+      provider: () => {
+        return new HDWalletProvider(
+          secrets.mnemonic,
+          `https://ropsten.infura.io/v3/${secrets.projectId}`
+        );
+      },
+      network_id: '3',
+    },
   },
 
   // Set default mocha options here, use special reporters etc.
@@ -103,13 +117,19 @@ module.exports = {
     },
   },
 
+  contracts_directory: './project/contracts',
+  contracts_build_directory: './build/contracts',
+  migrations_directory: './project/migrations',
   // Truffle DB is currently disabled by default; to enable it, change enabled: false to enabled: true
   //
   // Note: if you migrated your contracts prior to enabling this field in your Truffle project and want
   // those previously migrated contracts available in the .db directory, you will need to run the following:
   // $ truffle migrate --reset --compile-all
-
+  api_keys: {
+    etherscan: `${secrets.etherscanApiKey}`,
+  },
   db: {
     enabled: false,
   },
+  plugins: ['truffle-plugin-verify'],
 };
